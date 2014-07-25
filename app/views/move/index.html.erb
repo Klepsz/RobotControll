@@ -1,0 +1,15 @@
+<center><h1>STEROWANIE ROBOTEM</h1></center>
+
+
+
+<%= link_to 'ostrożnie do przodu', move_slow_forward_path, class: "btn btn-success btn-lg btn-block" %></br>
+<center><%= link_to 'do przodu', move_forward_path, class: "btn btn-success btn-lg" %></center></br>
+<center><%= link_to 'lewo', move_left_path, class: "btn btn-primary btn-lg" %> <%= link_to 'prawo', move_right_path, class: "btn btn-primary btn-lg" %></center></br>
+<center><%= link_to 'do tyłu', move_backward_path, class: "btn btn-success btn-lg" %></center></br>
+<%= link_to 'ostrożnie do tyłu', move_slow_backward_path, class: "btn btn-success btn-lg btn-block" %></br>
+<center> <%= link_to 'atak', move_attack_path, class: "btn btn-danger btn-lg" %> <%= link_to 'odpal śmigło', move_run_path, class: "btn btn-danger btn-lg" %> </center></br>
+</br>
+<center>Czujnik cofania <%= @proximity %></center>
+
+
+

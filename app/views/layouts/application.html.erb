@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>RobotControll</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="background-color: #999">
+
+<div id="user_header">
+  <% if current_user %>
+    Logged in as <%= current_user.email %><br />
+    <%= link_to "Log Out", logout_path, class: "btn btn-default"  %>
+  <% else %>
+    <%= link_to "Sign Up!", signup_path, class: "btn btn-default" %>
+    <%= link_to "Log in!", login_path, class: "btn btn-default" %>
+  <% end %>
+</div>
+
+<%= yield %>
+
+</body>
+</html>
